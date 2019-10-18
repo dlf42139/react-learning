@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 
 class ToDoItem extends Component {
 	render() {
-		return <div>hhh</div>
+		const { deleteItem, idx, value } = this.props
+		return <div onClick={() => { deleteItem(idx) }}>
+			{idx}) {value}
+		</div>
 	}
 }
 

@@ -44,16 +44,11 @@ class toDoList extends Component {
         </div>
         {
           this.state.vlaueList.map((item, idx) => {
-            return <ToDoItem key={idx} value={item}/>
-            // return <li
-            //   key={idx}
-            //   onClick={() => {
-            //     this.deleteItem(idx)
-            //   }}
-            //   dangerouslySetInnerHTML={{ __html: item }}
-            // >
-            // </li>
-            
+            return <ToDoItem
+            key={idx}
+              idx={idx}
+              value={item}
+              deleteItem={this.deleteItem.bind(this)} />
           })
         }
       </Fragment>
