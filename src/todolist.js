@@ -45,7 +45,7 @@ class toDoList extends Component {
         {
           this.state.vlaueList.map((item, idx) => {
             return <ToDoItem
-            key={idx}
+              key={idx}
               idx={idx}
               value={item}
               deleteItem={this.deleteItem.bind(this)} />
