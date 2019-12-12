@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react'
-import './index.less'
+import React, { Fragment } from 'react';
+import RadioChart from './charts/radio-chart';
+import './index.less';
 class View extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +25,10 @@ class View extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="tab-head">
+        <div className="chart">
+          <RadioChart />
+        </div>
+        {/* <div className="tab-head">
           {
             this.state.content.map((item, idx) => {
               return (
@@ -55,7 +59,7 @@ class View extends React.Component {
               )
             })
           }
-        </div>
+        </div> */}
       </div>
     )
   }
